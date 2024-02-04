@@ -1,0 +1,21 @@
+{
+    "appName": "latwoapp",
+    "roleName": "pinpointLambdaRoled005ed01",
+    "cloudformationPolicyName": "cloudformationPolicyd005ed01",
+    "cloudWatchPolicyName": "cloudWatchPolicyd005ed01",
+    "pinpointPolicyName": "pinpointPolicyd005ed01",
+    "authPolicyName": "pinpoint_amplify_d005ed01",
+    "unauthPolicyName": "pinpoint_amplify_d005ed01",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

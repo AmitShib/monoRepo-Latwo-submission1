@@ -1,0 +1,39 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-belleatdiners-staging-200212-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335439699:role/amplify-belleatdiners-staging-200212-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335439699:role/amplify-belleatdiners-staging-200212-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-belleatdiners-staging-200212-deployment",
+      "UnauthRoleName": "amplify-belleatdiners-staging-200212-unauthRole",
+      "StackName": "amplify-belleatdiners-staging-200212",
+      "StackId": "arn:aws:cloudformation:eu-west-1:730335439699:stack/amplify-belleatdiners-staging-200212/cd5c0550-b7ce-11ee-89ef-02e1fcfa5a73",
+      "AmplifyAppId": "d22k4phgquo2ts",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-belleatdiners-staging-200212-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "LatwoApp": {}
+      },
+      "function": {
+        "LatwoAppCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-belleatdiners-staging-200212-deployment",
+          "s3Key": "amplify-builds/LatwoAppCreateAuthChallenge-72354b50693155313149-build.zip"
+        },
+        "LatwoAppDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-belleatdiners-staging-200212-deployment",
+          "s3Key": "amplify-builds/LatwoAppDefineAuthChallenge-3444694b517471514e59-build.zip"
+        },
+        "LatwoAppVerifyAuthChallengeResponse": {
+          "deploymentBucketName": "amplify-belleatdiners-staging-200212-deployment",
+          "s3Key": "amplify-builds/LatwoAppVerifyAuthChallengeResponse-7236444d645271302f7a-build.zip"
+        }
+      },
+      "analytics": {
+        "latwoapp": {},
+        "belleatdinersKinesis": {}
+      }
+    }
+  }
+}

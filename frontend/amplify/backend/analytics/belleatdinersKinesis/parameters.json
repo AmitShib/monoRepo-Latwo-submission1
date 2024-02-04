@@ -1,0 +1,12 @@
+{
+  "kinesisStreamName": "belleatdinersKinesis",
+  "kinesisStreamShardCount": 1,
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authPolicyName": "kinesis_amplify_148229ce",
+  "unauthPolicyName": "kinesis_amplify_148229ce"
+}

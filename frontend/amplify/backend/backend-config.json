@@ -1,0 +1,143 @@
+{
+  "analytics": {
+    "belleatdinersKinesis": {
+      "providerPlugin": "awscloudformation",
+      "service": "Kinesis"
+    },
+    "latwoapp": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
+  "auth": {
+    "LatwoApp": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "LatwoAppCreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "LatwoAppDefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "LatwoAppVerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE"
+          ],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "NAME",
+          "FAMILY_NAME",
+          "EMAIL",
+          "PHONE_NUMBER",
+          "GENDER",
+          "BIRTHDATE"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "LatwoAppCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "LatwoAppDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "LatwoAppVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_LatwoAppCreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LatwoAppCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_LatwoAppCreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LatwoAppCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_LatwoAppDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LatwoAppDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_LatwoAppDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LatwoAppDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_LatwoAppVerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LatwoAppVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_LatwoAppVerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LatwoAppVerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}

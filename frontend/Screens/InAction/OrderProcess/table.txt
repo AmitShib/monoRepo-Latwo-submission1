@@ -1,0 +1,59 @@
+// import Amplify, { Auth } from 'aws-amplify';
+
+
+// const createOrder = async () => {
+//   try {
+//     // Get the current authenticated user
+//     const user = await Auth.currentAuthenticatedUser();
+
+//     // Extract the user information from the attributes
+//     const { name, email } = user.attributes;
+
+//     const orderData = {
+//       user: {
+//         name,
+//         email,
+//         // Add other user data as needed
+//       },
+//       dishes: selectedDishes.map((dishID) => {
+//         for (const restaurant of restaurantsData) {
+//           for (const item of restaurant.menu) {
+//             if (item.dishID === dishID) {
+//               return {
+//                 name: item.name,
+//                 description: item.description,
+//                 price: item.price,
+//                 duration: item.duration,
+//               };
+//             }
+//           }
+//         }
+//         return null;
+//       }),
+//     };
+
+//     // Send the orderData as a POST request
+//     fetch('your_api_endpoint', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(orderData),
+//     })
+//       .then(response => response.json())
+//       .then(data => {
+//         // Handle the response data (if any)
+//         console.log('Order placed successfully!', data);
+//       })
+//       .catch(error => {
+//         // Handle any errors that occur during the POST request
+//         console.error('Error placing the order:', error);
+//       });
+
+//     // Close the modal after the order is sent
+//     setModalVisible(false);
+//   } catch (error) {
+//     console.error('Error getting user information:', error);
+//     // Handle any errors that occur when fetching user information
+//   }
+// };
