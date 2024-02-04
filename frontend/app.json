@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Belleat",
+    "slug": "Belleat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./Tools/Src/Icons/Belleaticononly.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./Tools/Src/Images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "permissions": [
+        "INTERNET"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./Tools/Src/Icons/Belleaticononly.png",
+        "backgroundColor": "#ffffff",
+        "permissions": [
+          "INTERNET", 
+          "ACCESS_NETWORK_STATE"
+        ]
+      }
+    },
+    "web": {
+      "build": {
+        "babel": {
+          "include": ["aws-amplify", "rn-swipe-button", "webpack-manifest-plugin","webpack","react-native-swiper"]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+to run the server move to the right file by the cd command.
+than write this in the terminal:
+node Server.js
+
+than write this in order to add a document by using the api:
+$ curl -X POST -H "Content-Type: application/json" -d '{"title":"Sample Title", "content":"Sample Content"}' http://localhost:3000/api/documents
+$ curl -X POST -H "Content-Type: application/json" -d '{"field1": "Value 3", "field2":52,"stringsArray": ["string1", "string2", "string3"]}' http://localhost:3000/api/data

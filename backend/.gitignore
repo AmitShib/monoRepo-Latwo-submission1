@@ -1,0 +1,25 @@
+# npm
+node_modules
+
+# editors
+.vscode
+.idea
+
+# logs
+*.log*
+
+#receipts
+receipt-*.png
+
+#printer
+.DS_Store
+
+# compiled
+dist
+
+# local files
+config.local.json
+
+# cache
+.eslintcache
+tsconfig.tsbuildinfo
